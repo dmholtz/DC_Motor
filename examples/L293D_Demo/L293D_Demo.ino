@@ -1,5 +1,5 @@
 #include <DC_Motor.h>
-#include "L239D.h"
+#include "L293D.h"
 
 /** Example L293D:
  * 
@@ -20,9 +20,10 @@ void setup() {
   DC_Motor* my_mot = new L293D(10, 31, 33);
   my_mot->ccw();
   delay(2000);
-  my_mot->stop();
 
-  delete my_mot;
+  //my_mot->stop(); // not required, since motor stops by calling its destructor
+
+  delete my_mot; // frees storage AND makes the motor stop
 
 }
 

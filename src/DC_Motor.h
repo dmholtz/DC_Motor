@@ -25,7 +25,7 @@ protected:
 
 public:
 	DC_Motor();
-	~DC_Motor() = default;
+	virtual ~DC_Motor() = default; // always provide virtual destructor since it ueses dynamic binding
 
 	virtual void on(const uint8_t pwm = 255) = 0;
 	virtual void off() = 0;

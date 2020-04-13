@@ -13,15 +13,15 @@ private:
 public:
 	DRV(const uint8_t enable_pin, const uint8_t phase_pin, const uint8_t mode_pin);
 	DRV(const uint8_t enable_pin, const uint8_t phase_pin);
-	~DRV();
+	virtual ~DRV();
 
-	virtual void on(uint8_t pwm = 255);
-	virtual void off();
+	virtual void on(uint8_t pwm = 255) override;
+	virtual void off() override;
 
-	virtual void cw(uint8_t speed = 255);
-	virtual void ccw(uint8_t speed = 255);
-	virtual void brake();
-	virtual void stop();
+	virtual void cw(uint8_t speed = 255) override;
+	virtual void ccw(uint8_t speed = 255) override;
+	virtual void brake() override;
+	virtual void stop() override;
 };
 
 #endif

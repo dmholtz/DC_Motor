@@ -1,4 +1,4 @@
-#include "L239D.h"
+#include "L293D.h"
 
 L293D::L293D(const uint8_t enable_pin, const uint8_t input1_pin, const uint8_t input2_pin)
 	: enable_pin{enable_pin}, input1_pin{input1_pin}, input2_pin{input2_pin}
