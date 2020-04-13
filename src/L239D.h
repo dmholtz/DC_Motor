@@ -12,7 +12,7 @@ private:
 	const uint8_t input2_pin;
 public:
 	L293D(const uint8_t enable_pin, const uint8_t input1_pin, const uint8_t input2_pin);
-	~L293D() = default;
+	~L293D();
 
 	virtual void on(uint8_t pwm = 255);
 	virtual void off();

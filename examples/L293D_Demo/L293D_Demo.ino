@@ -17,7 +17,7 @@
 
 void setup() {
   
-  DC_Motor* my_mot = new L293D(10, 31, 33};
+  DC_Motor* my_mot = new L293D(10, 31, 33);
   my_mot->ccw();
   delay(2000);
   my_mot->stop();

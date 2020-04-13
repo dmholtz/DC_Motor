@@ -22,6 +22,11 @@ DRV::DRV(const uint8_t enable_pin, const uint8_t phase_pin)
 	// mode_pin is pulled on high by hardware
 }
 
+DRV::~DRV()
+{
+	this->stop();
+}
+
 void DRV::on(const uint8_t pwm)
 {
 	this->cw(pwm);

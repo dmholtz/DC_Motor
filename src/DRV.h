@@ -13,7 +13,7 @@ private:
 public:
 	DRV(const uint8_t enable_pin, const uint8_t phase_pin, const uint8_t mode_pin);
 	DRV(const uint8_t enable_pin, const uint8_t phase_pin);
-	~DRV() = default;
+	~DRV();
 
 	virtual void on(uint8_t pwm = 255);
 	virtual void off();

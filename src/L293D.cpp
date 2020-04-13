@@ -11,6 +11,11 @@ L293D::L293D(const uint8_t enable_pin, const uint8_t input1_pin, const uint8_t i
 	digitalWrite(input2_pin, LOW);
 }
 
+L293D::~L293D()
+{
+	this->stop();
+}
+
 void L293D::on(const uint8_t pwm)
 {
 	this->cw(pwm);
