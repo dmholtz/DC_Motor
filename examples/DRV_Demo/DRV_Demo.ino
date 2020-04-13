@@ -1,7 +1,7 @@
 #include <DC_Motor.h>
-#include "L239D.h"
+#include "DRV.h"
 
-/** Example L293D:
+/** Example DRV:
  * 
  * (C) by dmholtz
  * April 2020
@@ -17,7 +17,8 @@
 
 void setup() {
   
-  DC_Motor* my_mot = new L293D(10, 31, 33};
+  // Activates M1 on Mirco Arduino
+  DC_Motor* my_mot = new DRV(10, 8, MISO);
   my_mot->ccw();
   delay(2000);
   my_mot->stop();
