@@ -10,7 +10,7 @@
 
 #include "Arduino.h"
 
-enum DC_Motor_State {
+enum class DC_Motor_State {
 	STOPPED = 0,
 	BRAKING = 0,
 	COUNTERCLOCKWISE = 1,
